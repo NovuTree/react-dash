@@ -9,23 +9,6 @@
   grid-template-rows: 50px auto 80px;
   height: 100vh;
 }
-.main {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-shadow: 0 1px 5px $black;
-  div {
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-  }
-  .bottom {
-    margin-bottom: 40px;
-  }
-}
-
 .top_left{
   grid-area:1/1/2/2;
 }
@@ -34,9 +17,6 @@
 }
 .middle{
   grid-area:2/2/3/3;
-//  display: flex;
-//  flex-flow: column nowrap;
-//  align-items: center;
   justify-self: center;
   align-self: center;
   text-shadow: 0 1px 5px $black;
@@ -56,4 +36,5 @@
 .bottom_center{
   grid-area:3/2/4/3;
   align-self: end;
+  margin-bottom: 20px;
 }

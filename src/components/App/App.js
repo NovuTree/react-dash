@@ -76,9 +76,9 @@ class App extends Component {
           backgroundImage: `url(${background.bg})`
         }}>
           <header/>
-          <main className="main">
+          <div className="middle">
             <Welcome setName={setName}/>
-          </main>
+          </div>
           <footer/>
         </div>
       );
@@ -88,57 +88,6 @@ class App extends Component {
           <div className="App" style={{
             backgroundImage: `url(${background.bg})`
           }}>
-          {/*
-            <header>
-              <LinksContainer state={apps.links} />
-              <WeatherContainer state={apps.weather} />
-            </header>
-
-            <main className="main">
-              <div className="top">
-                {apps.clock && apps.timer &&
-                  <TimeIcons timer={timer.showing} onToggleTimer={toggleTimer} />
-                }
-                {(timer.showing || !apps.clock) &&
-                  <Timer
-                    state={apps.timer}
-                    duration={timer.duration}
-                    seconds={timer.seconds}
-                    settings={timer.settings}
-                    id={timer.id}
-                    active={timer.active}
-                    onSetTimer={setTimer}
-                    onResetTimer={resetTimer}
-                    onUpdateTimer={updateTimer}
-                  />
-                }
-                {(!timer.showing || !apps.timer) &&
-                  <Clock
-                    state={apps.clock}
-                    time={time}
-                    updateTime={updateTime}
-                  />
-                }
-              </div>
-
-              <div className="bottom">
-                <Message state={apps.message} time={time} name={name}/>
-                <Focus
-                  state={apps.focus}
-                  focus={focus}
-                  setFocus={setFocus}
-                  deleteFocus={deleteFocus}
-                  toggleFocus={toggleFocus}
-                />
-              </div>
-            </main>
-
-            <footer>
-              <SettingsContainer />
-              <CurrentQuoteContainer state={apps.quote} />
-              <ListContainer state={apps.todo} />
-            </footer>
-            */}
             <div className="top_left">
               <LinksContainer state={apps.links} />
             </div>
@@ -182,12 +131,12 @@ class App extends Component {
             </div>
             <div className="bottom_left">
               <SettingsContainer />
+              <BgInfo background={background} />
             </div>
             <div className='bottom_center'>
               <CurrentQuoteContainer state={apps.quote} />
             </div>
             <div className="bottom_right">
-              <BgInfo background={background} />
               <ListContainer state={apps.todo} />
             </div>
           </div>
