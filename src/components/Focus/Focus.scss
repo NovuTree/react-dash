@@ -15,7 +15,6 @@
   }
   > span {
     margin: 0 10px;
-    // flex: 1;
     font-size: 3em;
     .checkbox {
       visibility: hidden;
@@ -53,7 +52,6 @@
   }
 }
 .Focus{
-  // margin: 10px 0;
   margin-bottom: 10px;
   text-align: center;
   .focus-prompt {
@@ -85,7 +83,7 @@
   button{
     margin: 10px 0 !important;
     padding: 0;
-    background-color: rgba(0,0,0,0);
+    background: transparent;
     border: none;
     border-left: 1px solid white;
     width: 100%;
@@ -94,16 +92,14 @@
     }
   }
   input{
+    text-shadow: 0 1px 5px $black;
+    color: $white;
     text-align: center;
-    &::placeholder{
-      // color:rgba(255, 255, 255, 0.5);
-    }
-    background-color: rgba(0,0,0,0);
+    background: transparent;
     border:none;
     width: 100%;
     &:focus{
       outline: none;
-      // background-color: rgba(255, 255, 255, 0.5);
       color: $white;
     }
   }

@@ -2,11 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Info=styled.div`
+  position: fixed;
+  left: 70px;
+  bottom: 24px;
   > span{
-    text-shadow: 0 1px 5px black;
+    text-shadow: 0 1px 5px ${({ theme}) => theme.black };;
+    white-space: nowrap;
     >a{
       opacity:0.7;
-      color:white;
+      color:${({ theme}) => theme.white };;
       &:hover{
         opacity:1;
       }
@@ -24,7 +28,7 @@ const BgInfo=({background})=>{
     </span>
   ):null;
   const source=current&&background.option==='unsplash'?(
-    <span>/ via <a href={'https://unsplash.com'+credit}>unsplash</a></span>
+    <span>/ via <a href={'https://unsplash.com'+credit}>Unsplash</a></span>
   ):null;
   return(
     <Info>

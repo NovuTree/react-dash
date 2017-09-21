@@ -27,18 +27,16 @@
     }
   }
   input{
+    color: $white;
+    text-shadow: 0 1px 5px $black;
     margin-top: 10px;
     font-size: 1em;
     text-align: center;
-    &::placeholder{
-      color: rgba(255, 255, 255, 0.5);
-    }
     background-color: rgba(0,0,0,0);
     border:none;
     width: 100%;
     &:focus{
       outline: none;
-      // background-color: rgba(255, 255, 255, 0.5);
       color: $white;
     }
   }
