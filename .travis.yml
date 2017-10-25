@@ -9,4 +9,8 @@ script:
   - npm test
 after_success:
   - mv build/index.html build/200.html
+<<<<<<< HEAD
   - surge --project ./build --domain react-dash.surge.sh
+=======
+  - surge --project ./build --domain react-dash-2.surge.sh
+>>>>>>> Fix typo in Timer preventing proper reset

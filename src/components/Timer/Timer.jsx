@@ -93,8 +93,12 @@ class Timer extends Component {
       const remaining = seconds - elapsed;
 
       if (!remaining) {
+<<<<<<< HEAD
         const duration = this.timeLeft(this.props.duration);
         notify(duration, this.props.settings);
+=======
+        notification.play();
+>>>>>>> Fix typo in Timer preventing proper reset
         this.props.onResetTimer();
       } else {
         this.props.onUpdateTimer(
